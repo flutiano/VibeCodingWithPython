@@ -1,3 +1,18 @@
+"""
+Bitcoin Price Fetcher using CoinGecko API
+
+Example output:
+    Fetching latest Bitcoin price...
+    
+    ==================================================
+               BITCOIN PRICE
+    ==================================================
+    Current Price:    $96,502.00 USD
+    24h Change:       ▲ +4.53%
+    Last Updated:     2026-01-14 23:58:52
+    ==================================================
+"""
+
 import requests
 import sys
 from datetime import datetime

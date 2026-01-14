@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# macOS
+.DS_Store
+
+# Media files (downloads)
+*.webm
+*.m4a
+*.mp4
+*.mkv
+*.mp3
+
+# yt-dlp dynamic components
+yt.solver.lib.min.js

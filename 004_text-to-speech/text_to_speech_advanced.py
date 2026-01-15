@@ -7,10 +7,13 @@ Prompts:
    correct language profile automatically.
 4. The user should be able to choose a voice (accent) for the audio file.
 5. Use pyttsx3 library to offer more choices for the voice (Siri, system voices).
+6. Please save the converted audio file to mp3, not wav.
 """
 
 import pyttsx3
 import os
+import subprocess
+import time
 
 def list_voices(engine):
     """
@@ -56,20 +59,43 @@ def advanced_tts():
 
         filename = input("Enter filename to save (e.g., 'speech.wav', leave blank to skip saving): ").strip()
 
-        # Speak immediately
-        print("Speaking...")
-        engine.say(text)
-        engine.runAndWait()
-
-        # Save to file if requested
+        # Save to file or just speak
         if filename:
-            if not (filename.endswith('.wav') or filename.endswith('.aiff') or filename.endswith('.mp3')):
-                filename += ".wav"
+            if not filename.endswith('.mp3'):
+                filename += ".mp3"
             
-            print(f"Saving to {filename}...")
-            engine.save_to_file(text, filename)
+            temp_audio = "temp_output.aiff" # Native format for macOS
+            if os.path.exists(temp_audio):
+                os.remove(temp_audio)
+
+            print(f"Generating audio file...")
+            engine.save_to_file(text, temp_audio)
             engine.runAndWait()
-            print("Successfully saved!")
+
+            # Wait a moment for the file to be fully written
+            time.sleep(1.0)
+
+            if os.path.exists(temp_audio) and os.path.getsize(temp_audio) > 1000:
+                print(f"Converting to MP3 via ffmpeg...")
+                try:
+                    # Use ffmpeg to convert aiff to mp3
+                    subprocess.run([
+                        "ffmpeg", "-y", "-i", temp_audio, 
+                        "-codec:a", "libmp3lame", "-qscale:a", "2", 
+                        filename
+                    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                    
+                    print(f"Successfully saved to '{filename}'!")
+                    os.remove(temp_audio)
+                except Exception as e:
+                    print(f"Conversion failed: {e}")
+            else:
+                print("Error: Audio generation failed or file too small.")
+        else:
+            # Just speak if no filename provided
+            print("Speaking...")
+            engine.say(text)
+            engine.runAndWait()
 
         print("\n" + "-"*30)
 

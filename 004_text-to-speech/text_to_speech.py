@@ -54,8 +54,30 @@ def text_to_speech():
                 print("Could not detect language, defaulting to English.")
                 detected_lang = 'en'
 
-            # Create the TTS object
-            tts = gTTS(text=text, lang=detected_lang)
+            # Voice/Accent Selection for English
+            tld = 'com'  # Default (US)
+            if detected_lang == 'en':
+                print("\nChoose an English Accent (Voice):")
+                accents = {
+                    '1': ('United States', 'com'),
+                    '2': ('United Kingdom', 'co.uk'),
+                    '3': ('Australia', 'com.au'),
+                    '4': ('India', 'co.in'),
+                    '5': ('Canada', 'ca'),
+                    '6': ('Ireland', 'ie')
+                }
+                for key, val in accents.items():
+                    print(f"{key}. {val[0]}")
+                
+                choice = input("Select an accent (1-6, default: 1): ").strip()
+                if choice in accents:
+                    tld = accents[choice][1]
+                    print(f"Selected: {accents[choice][0]}")
+                else:
+                    print("Using default: United States")
+
+            # Create the TTS object with the selected TLD
+            tts = gTTS(text=text, lang=detected_lang, tld=tld)
             
             # Save the speech to a file
             tts.save(filename)

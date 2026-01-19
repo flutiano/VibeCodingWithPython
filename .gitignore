@@ -17,3 +17,6 @@ __pycache__/
 
 # yt-dlp dynamic components
 yt.solver.lib.min.js
+
+# Environment variables
+.env

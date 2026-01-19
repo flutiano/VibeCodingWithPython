@@ -20,6 +20,10 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 1. **Task Prompts**: The original prompt for each task must be added to the generated source code as a comment at the top of the main file.
 2. **Example Outputs**: If the task produces outputs (e.g., console output, generated files), include an example of the output as a comment in the source code.
 
+#### Documentation
+1. **Implementation Plan**: Upon task completion, save the final implementation plan as `Plan.md` in the task directory.
+2. **Walkthrough**: Upon task completion, save the final walkthrough as `README.md` in the task directory.
+
 ## Current Project Structure
 - `000_hello-world`: Initial setup
 - `001_youtube-downloader`: Video download tool
@@ -27,3 +31,4 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 - `003_wikipedia_search`: Information retrieval
 - `004_text-to-speech`: Audio generation
 - `005_email-sender`: SMTP email automation
+- `006_image-recognition`: AI-powered image classification

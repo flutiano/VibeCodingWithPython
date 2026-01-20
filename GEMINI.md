@@ -19,6 +19,7 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 #### Source Code Standards
 1. **Task Prompts**: The original prompt for each task must be added to the generated source code as a comment at the top of the main file.
 2. **Example Outputs**: If the task produces outputs (e.g., console output, generated files), include an example of the output as a comment in the source code.
+3. **Dependencies**: A `requirements.txt` file must be created in the task directory listing all specific Python dependencies for that task.
 
 #### Documentation
 1. **Implementation Plan**: Upon task completion, save the final implementation plan as `Plan.md` in the task directory.

@@ -33,3 +33,5 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 - `004_text-to-speech`: Audio generation
 - `005_email-sender`: SMTP email automation
 - `006_image-recognition`: AI-powered image classification
+- `007_personal-website`: Personal website with Flask
+- `008_personal-website-enhanced`: Improved website with Theme Switcher

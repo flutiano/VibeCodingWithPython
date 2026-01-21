@@ -37,3 +37,4 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 - `008_personal-website-enhanced`: Improved website with Theme Switcher
 - `009_pythonanywhere-deployment`: Cloud deployment to PythonAnywhere
 - `010_flappy-bird`: Flappy Bird game with Pygame
+- `011_flappy-bird-refactored`: Refactored Flappy Bird with base class extraction

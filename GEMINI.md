@@ -35,3 +35,4 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 - `006_image-recognition`: AI-powered image classification
 - `007_personal-website`: Personal website with Flask
 - `008_personal-website-enhanced`: Improved website with Theme Switcher
+- `009_pythonanywhere-deployment`: Cloud deployment to PythonAnywhere

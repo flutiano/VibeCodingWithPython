@@ -1,0 +1,3 @@
+# No specific python dependencies for this deployment metadata task.
+# The app itself uses Flask.
+Flask==3.0.0

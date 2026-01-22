@@ -12,7 +12,7 @@ Create a Python program that transcribes audio files and generates a concise sum
     2.  Google SDK only (Gemini for both)
     3.  Structured Agent (Pydantic AI)
 
-## Tech Stack
+## Tech StackV
 - **Python 3.12**
 - **AssemblyAI SDK**: For high-accuracy transcription.
 - **google-genai**: For Gemini 2.5 Flash transcription and summarization.

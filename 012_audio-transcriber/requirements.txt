@@ -1,0 +1,6 @@
+assemblyai
+python-dotenv
+google-genai
+pydantic-ai
+pydantic-settings
+requests

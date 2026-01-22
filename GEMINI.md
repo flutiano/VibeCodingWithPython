@@ -39,3 +39,4 @@ This repository is dedicated to "Vibe Coding" practice—using AI agents to quic
 - `010_flappy-bird`: Flappy Bird game with Pygame
 - `011_flappy-bird-refactored`: Refactored Flappy Bird with base class extraction
 - `012_audio-transcriber`: Audio transcription and summarization (AssemblyAI, Google, Pydantic AI)
+- `013_stock-alert-bot`: Multi-platform market data alerts (Discord & Telegram)
